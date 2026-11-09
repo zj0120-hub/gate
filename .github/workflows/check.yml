@@ -8,7 +8,10 @@ name: VPN Gate Node Check
 #     - cron: '*/30 * * * *'
 
 on:
+  schedule:
+    - cron: '*/120 * * * *'   # 每 120 分钟一次，改成你自己的节奏
   workflow_dispatch:
+Copy
     inputs:
       max_nodes:
         description: '最多检测多少个节点（0 = 全部）'
